@@ -8,7 +8,7 @@
 
 # Penambahan UAS:<br>
 - Tranlasi Inggris -> Bahasa Indonesia<br>
-- init data <br>
+- init data (.csv) <br>
 - exception<br>
 - Subclass Vitamin, Whey Protein <br>
 - Overloading pada Subclass Vitamin, Whey Protein <br>

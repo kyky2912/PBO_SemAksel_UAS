@@ -23,7 +23,7 @@ Penambahan UAS=
 */
 
 
-//Main Task
+//Main Task (Fitur")
 public class InventoryTask {
 
     public static void MainMenuDisplay() {
@@ -49,7 +49,7 @@ public class InventoryTask {
         System.out.println("Add to your cart" + "\n" + "[");
 
     }
-
+    //Menjalankan keseluruhan program
     public static void main(String[] args) throws IOException {
         Inventory inv = new Inventory();
         inv.readFromCSV();
@@ -109,6 +109,7 @@ public class InventoryTask {
                 Scanner input = new Scanner(System.in);
                 int mainmenu = input.nextInt();
                 switch (mainmenu) {
+                    //Fitur Menu 1
                     case 1:
                         displayINV();
                         int anyInput = input.nextInt();
@@ -175,6 +176,7 @@ public class InventoryTask {
                                 break;
                         }
                         break;
+                    //Fitur Menu 2
                     case 2:
                         Order order = new Order();
                         System.out.println("Jenis barang apa yang ingin anda ubah? ");
@@ -205,27 +207,32 @@ public class InventoryTask {
                         inv.addOrders(order);
 
                         break;
+                    //Fitur Menu 3
                     case 3:
                         System.out.println(inv.getInventory());
                         break;
+                    //Fitur Menu 4
                     case 4:
                         System.out.println(inv.orders.toString());
                         break;
+                    //Fitur Menu 5
                     case 5:
                         System.out.println("----------------------------INVENTORY---------------------------- \n");
                         System.out.println(inv.toString());
                         System.out.println("\n----------------------------ORDERS----------------------------\n");
                         System.out.println(inv.orders.toString());
                         break;
-
+                    //Fitur Menu 6
                     case 6:
                         inv.writeToCSV();
                         System.out.println("Data tersimpan dengan format 'inventoryitem.csv' !");
                         break;
+                    //Fitur Menu 7
                     case 7:
                         inv.SortItems();
                         System.out.println("Data telah disimpan dengan format 'DataSort.csv' !");
                         break;
+                    //Fitur Menu 8
                     case 8:
                         System.out.println("Terima Kasih telah menggunakan aplikasi GrabMart KW !" 
                         + "\n" + "Semoga aplikasi ini bermanfaat untuk Usaha Mikro di Indonesia"+ "\n" + "Sampai Jumpa");

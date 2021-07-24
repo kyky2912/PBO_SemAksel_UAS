@@ -18,6 +18,7 @@ public class Inventory {
     public Inventory() {
     }
 
+    //Melakukan pembacaan data dari file .csv || init data
     public void readFromCSV() throws IOException {
         BufferedReader csvReader = new BufferedReader(new FileReader("inventoryitem.csv"));
         while ((row = csvReader.readLine()) != null) {
@@ -45,7 +46,7 @@ public class Inventory {
     csvReader.close();
     }
 
-
+    //Melakukan Write ke file .csv
     public void writeToCSV() throws IOException {
         FileWriter csvWriter = new FileWriter("inventoryitem.csv");
         csvWriter.append("Type");
@@ -65,6 +66,7 @@ public class Inventory {
 
     }
 
+    //Melakukan Sort Tipe Data (Jenis Inventory) A-Z 
     public void SortItems() throws IOException{
                 BufferedReader reader = new BufferedReader(new FileReader("inventoryitem.csv"));
                 Map<String, List<String>> map = new TreeMap<String, List<String>>();
